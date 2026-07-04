@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<title>RC Motogarage — Premium Motorcycle Gear & Apparel</title>
+<style>
+  :root {
+    --bg: #141414;
+    --bg-2: #1E1E1E;
+    --bg-3: #2A2A2A;
+    --muted: #B8B4AE;
+    --red: #ED1C24;
+    --white: #FFFFFF;
+    --orange: #ED1C24;
+    --charcoal: #1E1E1E;
+    --sand: #2A2A2A;
+    --max: 1200px;
+    --gap: 2rem;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    color: var(--white);
+    background: var(--bg);
+    line-height: 1.6;
+  }
+
+  /* Film grain overlay */
+  .grain {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: .08;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='a'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0'/></filter><rect width='100%25' height='100%25' filter='url(%23a)' opacity='.85'/></svg>");
+  }
+
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: var(--red); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .container {
+    width: 92%;
+    max-width: var(--max);
+    margin-inline: auto;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: .9rem;
+  }
+  .brand {
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--white);
+  }
+  .brand span { color: var(--red); }
+  nav ul {
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: .92rem;
+    color: var(--white);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+  nav a:hover { color: var(--red); }
+
+  section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-block: 6rem;
+  }
+  .container {
+    width: 92%;
+    max-width: var(--max);
+    margin-inline: auto;
+  }
+  .label {
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    font-size: .78rem;
+    color: var(--red);
+    margin-block-end: .6rem;
+  }
+
+  /* Hero */
+  #home {
+    padding-block: 2rem 4.5rem;
+    background: var(--bg);
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .hero h1 {
+    font-size: clamp(1.6rem, 4.2vw, 3.6rem);
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+    margin: .2rem 0 .6rem;
+    color: var(--white);
+  }
+  .hero .accent {
+    color: var(--red);
+    font-style: italic;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: -0.02em;
+  }
+  .hero p.lead {
+    max-width: 56ch;
+    font-size: 1.1rem;
+    color: var(--muted);
+    margin: 0 0 1.4rem;
+  }
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: var(--red);
+    color: var(--white);
+    padding: .9rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    font-size: .92rem;
+  }
+  .cta:hover { background: #c4151d; color: var(--white); }
+  .btn-full { display: block; width: 100%; text-align: center; }
+  .hero-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    background: var(--bg-2);
+    aspect-ratio: 16 / 10;
+  }
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.01);
+  }
+
+  /* Products */
+  #products { background: var(--bg-2); }
+  .section-header {
+    display: grid;
+    gap: .3rem;
+    margin-bottom: 2.4rem;
+  }
+  .section-header h2 {
+    margin: 0;
+    font-size: clamp(1.5rem, 3vw, 2.6rem);
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    font-weight: 800;
+    color: var(--white);
+  }
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+  .card {
+    background: var(--bg-3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+  }
+  .card-img {
+    aspect-ratio: 16 / 10;
+    background: var(--bg-2);
+    overflow: hidden;
+  }
+  .card--tile {
+    display: block;
+    padding: 0;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--bg-3);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .card--tile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    background: var(--bg-2);
+  }
+  .card--tile:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+  }
+  .card-body {
+    padding: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .card h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--white);
+  }
+  .tag {
+    display: inline-block;
+    width: fit-content;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    background: rgba(237, 28, 36, 0.18);
+    color: var(--red);
+    padding: .2rem .6rem;
+    border-radius: 999px;
+  }
+  .coming {
+    display: block;
+    width: 100%;
+    padding: .75rem .9rem;
+    background: var(--red);
+    color: var(--white);
+    text-align: center;
+    font-weight: 700;
+    font-size: .82rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    border: none;
+  }
+
+  /* About */
+  #about { background: var(--bg); color: #ECE5D8; }
+  #about .label { color: var(--red); }
+  .about-grid {
+    display: grid;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .about-text p {
+    max-width: 70ch;
+    color: var(--muted);
+    margin: 0 0 1rem;
+    font-size: 1.02rem;
+  }
+  .branches {
+    margin-top: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  .branch {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 1rem;
+    background: var(--bg-2);
+  }
+  .branch strong { display: block; font-size: .95rem; letter-spacing: .04em; color: var(--white); }
+  .branch span { color: var(--muted); font-size: .88rem; }
+
+  /* Contact */
+  #contact {
+    background: var(--bg-2);
+  }
+  .contact-grid {
+    display: grid;
+    gap: 1.5rem;
+    align-items: start;
+  }
+  .contact h2 {
+    margin: 0;
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    font-weight: 800;
+    color: var(--white);
+  }
+  .contact p {
+    max-width: 68ch;
+    color: var(--muted);
+    margin: .6rem 0 1rem;
+  }
+  .contact .block {
+    background: var(--bg-3);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.2rem;
+  }
+  .contact .block h4 {
+    margin: 0 0 .8rem;
+    font-size: .85rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+  .contact-items {
+    display: grid;
+    gap: .6rem;
+  }
+  .contact-items div {
+    font-size: .96rem;
+    color: var(--white);
+  }
+  .contact-items a {
+    word-break: break-word;
+  }
+
+  footer {
+    padding-block: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    color: var(--muted);
+    font-size: .9rem;
+    background: var(--bg);
+  }
+  footer strong { color: var(--white); }
+
+  /* Wider layouts */
+  @media (min-width: 860px) {
+    .hero { grid-template-columns: 1.1fr .9fr; }
+    .about-grid { grid-template-columns: 1fr 1fr; }
+    .contact-grid { grid-template-columns: 1fr .9fr; }
+  }
+  @media (min-width: 1100px) {
+    .products { grid-template-columns: repeat(3, 1fr); }
+  }
+</style>
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header>
+  <div class="container nav">
+    <div class="brand">RC <span>Motogarage</span></div>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero / Showcase -->
+  <section id="home">
+    <div class="container hero">
+      <div>
+        <div class="label">Portfolio Showcase</div>
+        <h1>Built for the ride.<br> <span class="accent">Designed for the road.</span></h1>
+        <p class="lead">RC Motogarage is a premium motorcycle helmet and apparel retailer in Indonesia — known for bold campaigns, hands-on service, and gear that matches the ride.</p>
+        <a class="cta" href="#products">Explore Concepts</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products">
+    <div class="container">
+      <div class="section-header">
+        <div class="label">Shop</div>
+        <h2>Motorcycle gear you can trust</h2>
+        <p style="color:#B8B4AE;max-width:70ch;margin:0;">Browse the full RC Motogarage collection and find ride-ready gear built for Indonesian riders.</p>
+      </div>
+
+      <div class="products">
+        <a class="card card--tile" href="shop.html"><img src="assets/001-arai-super-sale.png" alt="Arai Super Sale"></a>
+        <a class="card card--tile" href="shop.html"><img src="assets/002-rs-taichi-clearance.png" alt="RS Taichi Clearance"></a>
+        <a class="card card--tile" href="shop.html"><img src="assets/003-store-project.jpg" alt="Store Experience"></a>
+      </div>
+
+      <a class="cta btn-full" href="shop.html" style="margin-top: 2.5rem;">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-text">
+        <div class="label">About the brand</div>
+        <h2 style="font-size:clamp(1.5rem,3vw,2.6rem);line-height:1.1;font-weight:800;margin:.3rem 0 .8rem;">Built on trust. Powered by community.</h2>
+        <p>RC Motogarage was founded to close the gap between high-end motorcycle gear and real Indonesian riders. From Arai and RS Taichi to local fit-outs and protective wear, every product is chosen to match terrain, weather, and riding style.</p>
+        <p>The brand grew from a single workshop into a household name across Greater Jakarta — known for same-day service, hands-on fitting, and campaigns that don’t just look good, but move people.</p>
+
+        <div class="branches">
+          <div class="branch">
+            <strong>Jakarta Selatan</strong>
+            <span>Flagship store + service center</span>
+          </div>
+          <div class="branch">
+            <strong>BSD / Tangerang</strong>
+            <span>Retail kiosk</span>
+          </div>
+          <div class="branch">
+            <strong>Workshop Labs</strong>
+            <span>Modifications, setup, fitting</span>
+          </div>
+        </div>
+      </div>
+      <div aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container contact-grid">
+      <div class="contact">
+        <div class="label">Contact</div>
+        <h2>Let’s talk.</h2>
+        <p>Interested in campaigns, retail partnerships, or gear recommendations — reach out directly to the RC Motogarage team.</p>
+        <div class="block">
+          <h4>RC Motogarage — Head Office</h4>
+          <div class="contact-items">
+            <div><strong>Location:</strong> Jakarta, Indonesia</div>
+            <div><strong>Phone:</strong> <a href="tel:+621234567890">+62 812 3456 7890</a></div>
+            <div><strong>Instagram:</strong> <a href="https://instagram.com/rc.motogarage" target="_blank" rel="noreferrer">@rc.motogarage</a></div>
+            <div><strong>Email:</strong> <a href="mailto:hello@rcmotogarage.id">hello@rcmotogarage.id</a></div>
+            <div><strong>Hours:</strong> Mon–Sat, 09:00–18:00</div>
+          </div>
+        </div>
+      </div>
+      <div aria-hidden="true"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <strong>RC Motogarage</strong> — Built for the ride. Designed for the road.<br>
+    <span style="color:#B8AE99;">Portfolio showcase · Single-page static site · No framework</span>
+  </div>
+</footer>
+</body>
+</html>

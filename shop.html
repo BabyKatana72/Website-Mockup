@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop — RC Motogarage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #141414;
+      --bg-2: #1E1E1E;
+      --bg-3: #2A2A2A;
+      --red: #ED1C24;
+      --white: #FFFFFF;
+      --muted: #B8B4AE;
+      --max: 1200px;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--white);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(20, 20, 20, 0.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-block: 1rem;
+    }
+    .nav-inner {
+      width: 92%;
+      max-width: var(--max);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      text-decoration: none;
+    }
+    .logo span { color: var(--red); }
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links a {
+      font-weight: 600;
+      font-size: .92rem;
+      color: var(--white);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: var(--red); }
+    .cta {
+      display: inline-block;
+      padding: .8rem 1.4rem;
+      background: var(--red);
+      color: var(--white);
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: .9rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .container {
+      width: 92%;
+      max-width: var(--max);
+      margin-inline: auto;
+    }
+    .section-header {
+      display: grid;
+      gap: .3rem;
+      margin-bottom: 2.4rem;
+    }
+    .section-header h2 {
+      margin: 0;
+      font-size: clamp(1.5rem, 3vw, 2.6rem);
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      font-weight: 800;
+      color: var(--white);
+    }
+    section { padding-block: 4rem; }
+    #shop-hero {
+      background: var(--bg);
+      padding-block: 6rem 4rem;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.2rem;
+    }
+    .card {
+      background: var(--bg-3);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .card-img {
+      aspect-ratio: 4 / 3;
+      background: var(--bg-2);
+      overflow: hidden;
+    }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .card-body {
+      padding: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .tag {
+      display: inline-block;
+      width: fit-content;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      background: rgba(237, 28, 36, 0.18);
+      color: var(--red);
+      padding: .2rem .6rem;
+      border-radius: 999px;
+    }
+    footer {
+      padding-block: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      text-align: center;
+      color: var(--muted);
+      font-size: .9rem;
+      background: var(--bg);
+    }
+    footer strong { color: var(--white); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <a class="logo" href="index.html">RC <span>Motogarage</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="shop-hero">
+      <div class="container">
+        <div class="section-header">
+          <div class="label">E-Commerce</div>
+          <h2>Rider gear, available now.</h2>
+          <p style="color:#B8B4AE;max-width:70ch;margin:0;">Helmets, apparel, armor, and accessories — curated for real rides.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="products">
+          <article class="card">
+            <div class="card-img"><img src="../assets/001-arai-super-sale.png" alt="Arai Super Sale campaign visual"></div>
+            <div class="card-body">
+              <span class="tag">Helmets</span>
+              <h3>Arai Super Sale</h3>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img"><img src="../assets/002-rs-taichi-clearance.png" alt="RS Taichi Clearance campaign visual"></div>
+            <div class="card-body">
+              <span class="tag">Apparel</span>
+              <h3>RS Taichi Clearance</h3>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img"><img src="../assets/003-store-project.jpg" alt="Store experience campaign visual"></div>
+            <div class="card-body">
+              <span class="tag">Retail</span>
+              <h3>Store Experience</h3>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-img"><img src="../assets/004-after-sales.png" alt="After Sales Service campaign visual"></div>
+            <div class="card-body">
+              <span class="tag">Service</span>
+              <h3>Devata Limited</h3>
+            </div>
+          </article>
+        </div>
+
+        <div style="margin-top:2.5rem;text-align:center;">
+          <a class="cta" href="index.html" style="font-size:1rem;padding:1rem 2.2rem;">Shop Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>RC Motogarage</strong> · Built for the ride.
+    </div>
+  </footer>
+</body>
+</html>
