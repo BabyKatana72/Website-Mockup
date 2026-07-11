@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-width=1.0" />
+<title>RC Motogarage — Pitch Deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    night: #0f0f0f;
+    charcoal: #1a1a1a;
+    graphite: #2a2a2a;
+    red: #ED1C24;
+    white: #FFFFFF;
+    muted: #B8B4AE;
+    gold: #D4AF37;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: #0f0f0f;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .deck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    padding: 2vh 2vw;
+  }
+  .slide {
+    width: min(1200px, 96vw);
+    min-height: 64vh;
+    background:
+      radial-gradient(1200px 800px at 10% 10%, #1a1a1a 0%, #0f0f0f 60%) local,
+      linear-gradient(135deg, #111 0%, #0f0f0f 100%);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 48px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* diagonal red accent top-right */
+  .slide::before {
+    content: '';
+    position: absolute;
+    top: -160px; right: -120px;
+    width: 720px; height: 180px;
+    background: linear-gradient(90deg, rgba(237,28,36,0.85), rgba(237,28,36,0));
+    transform: rotate(-12deg);
+    pointer-events: none;
+  }
+  .tagline {
+    position: absolute; top: 22px; left: 32px;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: #ED1C24; font-weight: 700;
+  }
+  .slide-num {
+    position: absolute; top: 20px; right: 32px;
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: #B8B4AE; font-weight: 700;
+  }
+  h1, h2, h3 {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+  }
+  h1 { font-size: 54px; margin: 0 0 10px; position: relative; }
+  h2 { font-size: 34px; margin: 0 0 14px; position: relative; }
+  h3 { font-size: 18px; margin: 0 0 18px; color: #ED1C24; font-weight: 700; letter-spacing: 0.12em; }
+  p, li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px; line-height: 1.55; color: #e6e3de;
+    font-weight: 400;
+  }
+  ul { padding-left: 18px; margin: 10px 0 0; position: relative; }
+  ul li { margin-bottom: 10px; }
+  .accent { color: #ED1C24; font-weight: 600; font-style: italic; text-transform: none; letter-spacing: 0; }
+  .divider { width: 80px; height: 3px; background: #ED1C24; margin: 18px 0 20px; transform: rotate(-8deg); }
+  .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; position: relative; }
+  .metric {
+    background: #1a1a1a; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 18px;
+  }
+  .metric .n { font-size: 28px; font-weight: 800; color: #fff; letter-spacing: 0.04em; }
+  .metric .l { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #B8B4AE; margin-top: 6px; font-weight: 700; }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 16px; position: relative; }
+  .card {
+    background: #1a1a1a; border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 18px;
+  }
+  .card h4 { margin: 0 0 8px; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #ED1C24; font-weight: 700; }
+  .card p { margin: 0; font-size: 13px; color: #d6d3ce; }
+  .gold { color: #D4AF37; }
+  .pill { display:inline-block; background:#ED1C24; color:#fff; border-radius:999px; padding: 10px 14px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; font-size:12px; position: relative; }
+  .cta { margin-top: 18px; }
+  .two-col { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 26px; align-items: center; position: relative; }
+  .cta-ring { width: 220px; height: 220px; border: 3px solid #ED1C24; border-radius: 999px; display:flex; align-items:center; justify-content:center; margin-left: auto; position: relative; }
+  .cta-ring::after { content:''; position:absolute; inset:12px; border:1px solid rgba(255,255,255,0.15); border-radius:999px; }
+  .cta-ring span { font-weight:800; letter-spacing:0.08em; text-transform:uppercase; text-align:center; padding: 10px; font-size: 14px; line-height: 1.2; }
+  @media (max-width: 920px) {
+    .slide { padding: 30px 26px; min-height: 70vh; }
+    h1 { font-size: 38px; }
+    h2 { font-size: 26px; }
+    .two-col, .grid, .metrics { grid-template-columns: 1fr; }
+    .cta-ring { width: 170px; height: 170px; margin-top: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="deck">
+
+  <!-- Cover -->
+  <section class="slide">
+    <div class="tagline">Premium motorcycle gear &amp; apparel · Jakarta</div>
+    <div class="slide-num">01 / 09</div>
+    <h1>RC Motogarage</h1>
+    <div class="divider"></div>
+    <h3 style="font-size:14px;">From a single workshop to the riding identity of Indonesia</h3>
+    <p class="accent">$100–200 projects · High-velocity creative services for Indonesian riders</p>
+    <div class="cta"><span class="pill">Prepared by Michael</span></div>
+  </section>
+
+  <!-- Vision -->
+  <section class="slide">
+    <div class="tagline">Why we exist</div>
+    <div class="slide-num">02 / 09</div>
+    <h2>The Garage Is Culture</h2>
+    <div class="divider"></div>
+    <p>RC Motogarage isn’t just helmet straps and jacket logos. We’re the <span class="accent">infrastructure</span> Indonesia’s fastest-growing rider community trusts: gear, kit, and direction.</p>
+    <div class="metrics">
+      <div class="metric"><div class="n">JKT+</div><div class="l">Household name</div></div>
+      <div class="metric"><div class="n">100%</div><div class="l">Rider-built credibility</div></div>
+      <div class="metric"><div class="n">$100–200</div><div class="l">Target project slot</div></div>
+    </div>
+  </section>
+
+  <!-- Audience -->
+  <section class="slide">
+    <div class="tagline">Who we build for</div>
+    <div class="slide-num">03 / 09</div>
+    <h2>Indonesian Riders, Not Posers</h2>
+    <div class="divider"></div>
+    <p>Real miles, real roads, real detail. Our audience rejects glossy fakery.</p>
+    <ul>
+      <li><span class="accent">Daily commuters</span> who ride wet, rain, heat, traffic.</li>
+      <li><span class="accent">Weekend sport riders</span> hunting confident, functional gear.</li>
+      <li><span class="accent">Community leaders</span> who buy what everyone else copies.</li>
+    </ul>
+  </section>
+
+  <!-- Offer -->
+  <section class="slide">
+    <div class="tagline">What we offer</div>
+    <div class="slide-num">04 / 09</div>
+    <h2>What We Sell</h2>
+    <div class="divider"></div>
+    <div class="grid">
+      <div class="card"><h4>01. Websites</h4><p>Conversion-first, on-brand, mobile-rider friendly.</p></div>
+      <div class="card"><h4>02. Campaign Visuals</h4><p>High-contrast, moody, motion-ready assets.</p></div>
+      <div class="card"><h4>03. Social Assets</h4><p>Feeds, shorts, carousels — fast and scroll-stopping.</p></div>
+      <div class="card"><h4>04. Packaging</h4><p>Limited edition identity. Premium detail, zero fluff.</p></div>
+    </div>
+  </section>
+
+  <!-- Business value -->
+  <section class="slide">
+    <div class="tagline">Business value</div>
+    <div class="slide-num">05 / 09</div>
+    <h2>Revenue By Identity</h2>
+    <div class="divider"></div>
+    <div class="two-col">
+      <div>
+        <p>Strong design defends <span class="accent">margin</span> and wins <span class="accent">community trust</span>. RC Motogarage’s broadband pricing is proven, repeatable, and scalable.</p>
+        <ul>
+          <li>Faster landing conversions from look to add-to-cart.</li>
+          <li>Media assets that convert followers into store visits.</li>
+          <li>Packaging that justifies limited-edition premiums up to <span class="accent gold">gold-trim</span> storytelling.</li>
+        </ul>
+      </div>
+      <div class="cta-ring"><span>Brand = Trust = Repeat Buys</span></div>
+    </div>
+  </section>
+
+  <!-- Positioning -->
+  <section class="slide">
+    <div class="tagline">How we win</div>
+    <div class="slide-num">06 / 09</div>
+    <h2>Not Another Generic Shop</h2>
+    <div class="divider"></div>
+    <div class="grid">
+      <div class="card"><h4>Motivation</h4><p>Built inside the garage. We know what riders actually wear.</p></div>
+      <div class="card"><h4>Speak</h4><p>Jakarta-native voice. No corporate façade. No coast-on-budget trend.</p></div>
+      <div class="card"><h4>Speed</h4><p>Fast turnaround, tight directional feedback, moving production lines.</p></div>
+      <div class="card"><h4>Look</h4><p>Night-black surfaces. <span class="gold" style="font-weight:700;">Gold</span> rarity. Red energy. Minimal, masculine, premium.</p></div>
+    </div>
+  </section>
+
+  <!-- Social Proof -->
+  <section class="slide">
+    <div class="tagline">Proof</div>
+    <div class="slide-num">07 / 09</div>
+    <h2>Proof Over Promise</h2>
+    <div class="divider"></div>
+    <ul>
+      <li><span class="accent">Heritage:</span> Grew from a single workshop into a name riders cite unprompted.</li>
+      <li><span class="accent">Precision:</span> Built by a senior graphic designer + previous head of marketing — no guesswork.</li>
+      <li><span class="accent">Constraints:</span> Financial discipline keeps deliverables sharp and project fees focused around <span class="accent gold">$100–200</span>.</li>
+    </ul>
+  </section>
+
+  <!-- Case Study -->
+  <section class="slide">
+    <div class="tagline">How we work</div>
+    <div class="slide-num">08 / 09</div>
+    <h2>A Typical Workflow</h2>
+    <div class="divider"></div>
+    <div class="grid">
+      <div class="card"><h4>01. Audit</h4><p>Quick brand + asset inventory on Penpot. No bloat.</p></div>
+      <div class="card"><h4>02. Direction</h4><p>1 mood deck, 1 style ref, clear version control.</p></div>
+      <div class="card"><h4>03. Exec</h4><p>Website / campaign / assets shipped in phases.</p></div>
+      <div class="card"><h4>04. Refine</h4><p>Retouch, resize, adapt for each channel in one tap.</p></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="slide">
+    <div class="tagline">Next step</div>
+    <div class="slide-num">09 / 09</div>
+    <h1>Let’s Ride Together.</h1>
+    <div class="divider"></div>
+    <p>We’re opening select project slots for Indonesian rider-focused brands.</p>
+    <p class="accent">Project fee target: $100–200 · Penpot-native · Zero Figma required.</p>
+    <div class="cta">
+      <span class="pill">Book a Pilot</span>
+      &nbsp;&nbsp;
+      <span class="pill" style="background:#2a2a2a; color:#fff; border:1px solid rgba(255,255,255,0.12);">See Past Work</span>
+    </div>
+    <p style="margin-top:18px; font-size:11px; color:#B8B4AE;">RC Motogarage · Jakarta · Indonesian Riders First</p>
+  </section>
+
+</div>
+<script>
+  // Browser print-friendly presentation mode
+  const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+  if(!isSafari && matchMedia('print').matches === false){
+    window.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'p') {
+        document.querySelectorAll('.slide').forEach((el) => el.style.breakInside = 'avoid');
+      }
+    });
+  }
+</script>
+</body>
+</html>

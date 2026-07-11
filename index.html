@@ -1,477 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-<title>RC Motogarage — Premium Motorcycle Gear & Apparel</title>
-<style>
-  :root {
-    --bg: #141414;
-    --bg-2: #1E1E1E;
-    --bg-3: #2A2A2A;
-    --muted: #B8B4AE;
-    --red: #ED1C24;
-    --white: #FFFFFF;
-    --orange: #ED1C24;
-    --charcoal: #1E1E1E;
-    --sand: #2A2A2A;
-    --max: 1200px;
-    --gap: 2rem;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RC Motogarage — Premium motorcycle gear & apparel. Precision engineered for real Indonesian riders.">
+  <meta name="theme-color" content="#0f0f0f">
+  <title>RC Motogarage — Precision Garage</title>
 
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  body {
-    font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-    color: var(--white);
-    background: var(--bg);
-    line-height: 1.6;
-  }
+  <!-- Preconnect Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  /* Film grain overlay */
-  .grain {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    z-index: 9999;
-    opacity: .08;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='a'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0'/></filter><rect width='100%25' height='100%25' filter='url(%23a)' opacity='.85'/></svg>");
-  }
-
-  img { display: block; max-width: 100%; height: auto; }
-  a { color: var(--red); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  .container {
-    width: 92%;
-    max-width: var(--max);
-    margin-inline: auto;
-  }
-
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(20, 20, 20, 0.85);
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
-  .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-block: .9rem;
-  }
-  .brand {
-    font-weight: 800;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-    font-size: 1rem;
-    color: var(--white);
-  }
-  .brand span { color: var(--red); }
-  nav ul {
-    display: flex;
-    gap: 1.2rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  nav a {
-    font-weight: 600;
-    font-size: .92rem;
-    color: var(--white);
-    letter-spacing: .04em;
-    text-transform: uppercase;
-  }
-  nav a:hover { color: var(--red); }
-
-  section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding-block: 6rem;
-  }
-  .container {
-    width: 92%;
-    max-width: var(--max);
-    margin-inline: auto;
-  }
-  .label {
-    display: inline-block;
-    font-weight: 700;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    font-size: .78rem;
-    color: var(--red);
-    margin-block-end: .6rem;
-  }
-
-  /* Hero */
-  #home {
-    padding-block: 2rem 4.5rem;
-    background: var(--bg);
-  }
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    align-items: center;
-  }
-  .hero h1 {
-    font-size: clamp(1.6rem, 4.2vw, 3.6rem);
-    line-height: 1.05;
-    letter-spacing: -0.03em;
-    font-weight: 800;
-    margin: .2rem 0 .6rem;
-    color: var(--white);
-  }
-  .hero .accent {
-    color: var(--red);
-    font-style: italic;
-    font-weight: 600;
-    text-transform: none;
-    letter-spacing: -0.02em;
-  }
-  .hero p.lead {
-    max-width: 56ch;
-    font-size: 1.1rem;
-    color: var(--muted);
-    margin: 0 0 1.4rem;
-  }
-  .cta {
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-    background: var(--red);
-    color: var(--white);
-    padding: .9rem 1.4rem;
-    border-radius: 999px;
-    font-weight: 700;
-    letter-spacing: .04em;
-    text-transform: uppercase;
-    font-size: .92rem;
-  }
-  .cta:hover { background: #c4151d; color: var(--white); }
-  .btn-full { display: block; width: 100%; text-align: center; }
-  .hero-image {
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-    background: var(--bg-2);
-    aspect-ratio: 16 / 10;
-  }
-  .hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: scale(1.01);
-  }
-
-  /* Products */
-  #products { background: var(--bg-2); }
-  .section-header {
-    display: grid;
-    gap: .3rem;
-    margin-bottom: 2.4rem;
-  }
-  .section-header h2 {
-    margin: 0;
-    font-size: clamp(1.5rem, 3vw, 2.6rem);
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-    font-weight: 800;
-    color: var(--white);
-  }
-  .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 1rem;
-  }
-  .card {
-    background: var(--bg-3);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 14px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: transform .2s ease, box-shadow .2s ease;
-  }
-  .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
-  }
-  .card-img {
-    aspect-ratio: 16 / 10;
-    background: var(--bg-2);
-    overflow: hidden;
-  }
-  .card--tile {
-    display: block;
-    padding: 0;
-    text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 14px;
-    overflow: hidden;
-    background: var(--bg-3);
-    transition: transform .2s ease, box-shadow .2s ease;
-  }
-  .card--tile img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    aspect-ratio: 1 / 1;
-    background: var(--bg-2);
-  }
-  .card--tile:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
-  }
-  .card-body {
-    padding: 0.9rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .card h3 {
-    margin: 0;
-    font-size: 0.95rem;
-    font-weight: 700;
-    color: var(--white);
-  }
-  .tag {
-    display: inline-block;
-    width: fit-content;
-    font-size: .72rem;
-    font-weight: 700;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    background: rgba(237, 28, 36, 0.18);
-    color: var(--red);
-    padding: .2rem .6rem;
-    border-radius: 999px;
-  }
-  .coming {
-    display: block;
-    width: 100%;
-    padding: .75rem .9rem;
-    background: var(--red);
-    color: var(--white);
-    text-align: center;
-    font-weight: 700;
-    font-size: .82rem;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    border-radius: 999px;
-    border: none;
-  }
-
-  /* About */
-  #about { background: var(--bg); color: #ECE5D8; }
-  #about .label { color: var(--red); }
-  .about-grid {
-    display: grid;
-    gap: 1.5rem;
-    align-items: center;
-  }
-  .about-text p {
-    max-width: 70ch;
-    color: var(--muted);
-    margin: 0 0 1rem;
-    font-size: 1.02rem;
-  }
-  .branches {
-    margin-top: 1.2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-  }
-  .branch {
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 12px;
-    padding: 1rem;
-    background: var(--bg-2);
-  }
-  .branch strong { display: block; font-size: .95rem; letter-spacing: .04em; color: var(--white); }
-  .branch span { color: var(--muted); font-size: .88rem; }
-
-  /* Contact */
-  #contact {
-    background: var(--bg-2);
-  }
-  .contact-grid {
-    display: grid;
-    gap: 1.5rem;
-    align-items: start;
-  }
-  .contact h2 {
-    margin: 0;
-    font-size: clamp(1.5rem, 3vw, 2.2rem);
-    letter-spacing: -0.02em;
-    line-height: 1.15;
-    font-weight: 800;
-    color: var(--white);
-  }
-  .contact p {
-    max-width: 68ch;
-    color: var(--muted);
-    margin: .6rem 0 1rem;
-  }
-  .contact .block {
-    background: var(--bg-3);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    padding: 1.2rem;
-  }
-  .contact .block h4 {
-    margin: 0 0 .8rem;
-    font-size: .85rem;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: var(--red);
-  }
-  .contact-items {
-    display: grid;
-    gap: .6rem;
-  }
-  .contact-items div {
-    font-size: .96rem;
-    color: var(--white);
-  }
-  .contact-items a {
-    word-break: break-word;
-  }
-
-  footer {
-    padding-block: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    text-align: center;
-    color: var(--muted);
-    font-size: .9rem;
-    background: var(--bg);
-  }
-  footer strong { color: var(--white); }
-
-  /* Wider layouts */
-  @media (min-width: 860px) {
-    .hero { grid-template-columns: 1.1fr .9fr; }
-    .about-grid { grid-template-columns: 1fr 1fr; }
-    .contact-grid { grid-template-columns: 1fr .9fr; }
-  }
-  @media (min-width: 1100px) {
-    .products { grid-template-columns: repeat(3, 1fr); }
-  }
-</style>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<div class="grain" aria-hidden="true"></div>
+  <!-- Carbon Fiber Texture Layer -->
+  <div class="texture-carbon" aria-hidden="true"></div>
+  <div class="ambient-glow" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
 
-<header>
-  <div class="container nav">
-    <div class="brand">RC <span>Motogarage</span></div>
-    <nav aria-label="Main">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#products">Shop</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__brand" aria-label="RC Motogarage Home">
+        <div class="nav__logo" aria-hidden="true">RC</div>
+        <span class="nav__name">Motogarage</span>
+      </a>
 
-<main>
-  <!-- Hero / Showcase -->
-  <section id="home">
-    <div class="container hero">
-      <div>
-        <div class="label">Portfolio Showcase</div>
-        <h1>Built for the ride.<br> <span class="accent">Designed for the road.</span></h1>
-        <p class="lead">RC Motogarage is a premium motorcycle helmet and apparel retailer in Indonesia — known for bold campaigns, hands-on service, and gear that matches the ride.</p>
-        <a class="cta" href="#products">Explore Concepts</a>
-      </div>
+      <ul class="nav__menu" id="navMenu" role="menubar">
+        <li role="none"><a href="/" class="nav__link" role="menuitem">Home</a></li>
+        <li role="none"><a href="/shop.html" class="nav__link" role="menuitem">Shop</a></li>
+        <li role="none"><a href="#about" class="nav__link" role="menuitem">About</a></li>
+        <li role="none"><a href="#contact" class="nav__link" role="menuitem">Contact</a></li>
+        </ul>
+
+        <button class="nav__mobile-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </section>
+  </nav>
 
-  <!-- Products -->
-  <section id="products">
+  <main id="mainContent">
+    <!-- Hero — Carousel (Concept 3: Precision Garage) -->
+    <section class="hero-carousel" aria-labelledby="heroTitle" role="region" aria-label="Featured highlights">
+      <div class="hero-carousel__track" id="heroTrack">
+        <!-- Slide 1: Editorial Split Screen -->
+        <div class="hero-carousel__slide hero-carousel__slide--split" data-slide="0">
+          <div class="hero-carousel__visual" aria-hidden="true">
+            <img
+              src="assets/images/hero-product.jpg"
+              alt="RC Motogarage premium motorcycle helmet — technical specification view"
+              class="hero-carousel__image"
+              loading="eager"
+              fetchpriority="high"
+            >
+          </div>
+          <div class="hero-carousel__content">
+            <p class="hero-carousel__label text-label">Precision Garage</p>
+            <h1 id="heroTitle" class="hero-carousel__title text-display">Engineered for the Ride</h1>
+            <p class="hero-carousel__description text-body text-muted">
+              Premium motorcycle gear built to exact specifications. No marketing fluff — just honest materials, precise fit, and uncompromising protection for real Indonesian riders.
+            </p>
+            <div class="hero-carousel__actions">
+              <a href="/shop.html" class="btn btn--primary" aria-label="Browse our catalog of precision gear">Shop Collection</a>
+              <a href="#about" class="btn btn--ghost" aria-label="Learn about our engineering philosophy">Our Process</a>
+            </div>
+            <div class="hero-carousel__specs" aria-label="Key specifications">
+              <div class="hero-carousel__spec-item">
+                <span class="hero-carousel__spec-label text-label">Helmet Standard</span>
+                <span class="hero-carousel__spec-value text-h3">SNI / ECE 22.06</span>
+              </div>
+              <div class="hero-carousel__spec-item">
+                <span class="hero-carousel__spec-label text-label">Jacket Abrasion</span>
+                <span class="hero-carousel__spec-value text-h3">AAA Rated</span>
+              </div>
+              <div class="hero-carousel__spec-item">
+                <span class="hero-carousel__spec-label text-label">Glove Certification</span>
+                <span class="hero-carousel__spec-value text-h3">KP Level 1</span>
+              </div>
+              <div class="hero-carousel__spec-item">
+                <span class="hero-carousel__spec-label text-label">Boot Protection</span>
+                <span class="hero-carousel__spec-value text-h3">CE Certified</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Campaign Spotlight -->
+        <div class="hero-carousel__slide hero-carousel__slide--campaign" data-slide="1">
+          <div class="hero-carousel__visual" aria-hidden="true">
+            <img
+              src="assets/images/featured-helmet.jpg"
+              alt="Arai RX-7V EVO RC Edition — limited edition carbon fiber helmet"
+              class="hero-carousel__image"
+              loading="lazy"
+            >
+          </div>
+          <div class="hero-carousel__content hero-carousel__content--centered">
+            <p class="hero-carousel__label text-label">Limited Drop</p>
+            <h1 class="hero-carousel__title text-display">Arai RX-7V EVO RC Edition</h1>
+            <p class="hero-carousel__description text-body text-muted" style="max-width: 60ch;">
+              Hand-laid PB-SNC2 carbon fiber shell. VAS-V visor system. Red-anodized ventilation ducts. Titanium D-ring. Laser-etched badge. 50 units Indonesia-wide.
+            </p>
+            <div class="hero-carousel__actions">
+              <a href="/shop.html#arai-rx7v" class="btn btn--primary" aria-label="View Arai RX-7V EVO RC Edition details">View Details</a>
+              <a href="#about" class="btn btn--ghost" aria-label="Learn about our engineering philosophy">Our Process</a>
+            </div>
+            <div class="hero-carousel__badge-row">
+              <span class="card__badge">Limited Edition</span>
+              <span class="card__badge" style="background: var(--color-gold);">50 Units Only</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Workshop Philosophy -->
+        <div class="hero-carousel__slide hero-carousel__slide--workshop" data-slide="2">
+          <div class="hero-carousel__visual" aria-hidden="true">
+            <img
+              src="assets/images/about-workshop.jpg"
+              alt="RC Motogarage workshop — precision tools and organized workstations"
+              class="hero-carousel__image"
+              loading="lazy"
+            >
+          </div>
+          <div class="hero-carousel__content hero-carousel__content--right">
+            <p class="hero-carousel__label text-label">Our Process</p>
+            <h1 class="hero-carousel__title text-display">Precision in Every Stitch</h1>
+            <p class="hero-carousel__description text-body text-muted" style="max-width: 55ch;">
+              From a single workshop in Jakarta to Indonesia's most trusted name in rider gear. We verify certifications, test fitment, and validate every spec before it reaches your hands.
+            </p>
+            <div class="hero-carousel__actions">
+              <a href="#about" class="btn btn--primary" aria-label="Learn about our process">Read Our Story</a>
+              <a href="/shop.html" class="btn btn--ghost" aria-label="Browse our catalog">Shop Gear</a>
+            </div>
+            <div class="hero-carousel__pillars">
+              <div class="hero-carousel__pillar">
+                <span class="hero-carousel__pillar-number" aria-hidden="true">01</span>
+                <span class="text-label">Curated Selection</span>
+              </div>
+              <div class="hero-carousel__pillar">
+                <span class="hero-carousel__pillar-number" aria-hidden="true">02</span>
+                <span class="text-label">Technical Verification</span>
+              </div>
+              <div class="hero-carousel__pillar">
+                <span class="hero-carousel__pillar-number" aria-hidden="true">03</span>
+                <span class="text-label">Rider Support</span>
+              </div>
+              <div class="hero-carousel__pillar">
+                <span class="hero-carousel__pillar-number" aria-hidden="true">04</span>
+                <span class="text-label">Community Driven</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls -->
+      <div class="hero-carousel__controls" aria-label="Carousel navigation">
+        <button class="hero-carousel__btn hero-carousel__btn--prev" aria-label="Previous slide" id="heroPrev">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="hero-carousel__btn hero-carousel__btn--next" aria-label="Next slide" id="heroNext">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+
+    </section>
+
+    <!-- Product Categories Teaser -->
+    <section class="section products-teaser" aria-labelledby="productsTeaserTitle">
+      <div class="container">
+        <header class="products-teaser__header">
+          <div>
+            <p class="products-teaser__title text-label">Shop by Category</p>
+            <h2 id="productsTeaserTitle" class="text-h2">Precision Equipment</h2>
+          </div>
+        </header>
+
+        <div class="products-teaser__grid" role="list" aria-label="Featured products">
+          <article class="card" role="listitem">
+            <img
+              src="assets/images/featured-helmet.jpg"
+              alt="Arai RX-7V EVO RC Edition — carbon fiber shell, red accent ventilation"
+              class="card__image"
+              loading="lazy"
+            >
+          </article>
+
+          <article class="card" role="listitem">
+            <img
+              src="assets/images/featured-jacket.jpg"
+              alt="Alpinestars GP Pro V2 leather suit — black with red accent stitching"
+              class="card__image"
+              loading="lazy"
+            >
+          </article>
+
+          <article class="card" role="listitem">
+            <img
+              src="assets/images/featured-gloves.jpg"
+              alt="Dainese Carbon D1 Long gloves — carbon knuckle protection, red stitching"
+              class="card__image"
+              loading="lazy"
+            >
+          </article>
+
+          <article class="card" role="listitem">
+            <img
+              src="assets/images/about-workshop.jpg"
+              alt="Sidi Vertigo 2 boots — microfiber, replaceable sliders"
+              class="card__image"
+              loading="lazy"
+            >
+          </article>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--space-2xl);">
+          <a href="/shop.html" class="btn btn--primary">Shop Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Process Section -->
+    <section class="section about" id="about" aria-labelledby="aboutTitle">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__visual">
+            <img
+              src="assets/images/about-workshop.jpg"
+              alt="RC Motogarage workshop — precision tools, organized workstations, motorcycle on lift"
+              class="about__image"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="about__content">
+            <p class="about__label text-label">Our Process</p>
+            <h2 id="aboutTitle" class="text-h1">Precision in Every Stitch</h2>
+            <p class="about__description text-body text-muted">
+              From a single workshop in Jakarta to Indonesia's most trusted name in rider gear. We don't chase trends — we engineer solutions. Every product passes through our hands before it reaches yours.
+            </p>
+
+            <div class="about__features">
+              <div class="about__feature">
+                <span class="about__feature-number" aria-hidden="true">01</span>
+                <div class="about__feature-text">
+                  <span class="about__feature-label">Curated Selection</span>
+                  <p class="about__feature-desc text-body text-muted">Every brand we carry meets our internal standards for material quality, certification, and real-world performance. No exceptions.</p>
+                </div>
+              </div>
+              <div class="about__feature">
+                <span class="about__feature-number" aria-hidden="true">02</span>
+                <div class="about__feature-text">
+                  <span class="about__feature-label">Technical Verification</span>
+                  <p class="about__feature-desc text-body text-muted">We verify certifications, test fitment, and validate specifications against manufacturer claims before listing any product.</p>
+                </div>
+              </div>
+              <div class="about__feature">
+                <span class="about__feature-number" aria-hidden="true">03</span>
+                <div class="about__feature-text">
+                  <span class="about__feature-label">Rider Support</span>
+                  <p class="about__feature-desc text-body text-muted">Post-purchase fitting guidance, warranty facilitation, and crash replacement programs. We're here for the long ride.</p>
+                </div>
+              </div>
+              <div class="about__feature">
+                <span class="about__feature-number" aria-hidden="true">04</span>
+                <div class="about__feature-text">
+                  <span class="about__feature-label">Community Driven</span>
+                  <p class="about__feature-desc text-body text-muted">Built by riders, for riders. Our team rides daily — we test what we sell on Jakarta streets and toll roads.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter / CTA Band -->
+    <section class="section" style="background: var(--color-charcoal); padding-left: 100px; padding-right: 100px;" aria-labelledby="newsletterTitle">
+      <div class="container" style="max-width: 100%; padding: 0;">
+        <div style="max-width: 2000px; margin: 0 auto; display: flex; align-items: center; gap: 300px; white-space: nowrap;">
+          <div style="flex: 0 1 640px; min-width: 260px;">
+            <p class="text-label" id="newsletterTitle">Stay Informed</p>
+            <h2 class="text-h2" style="margin-bottom: var(--space-xs);">Precision Drops — No Spam</h2>
+            <p class="text-body text-muted">Limited editions, restock alerts, and technical deep-dives. Sent only when it matters.</p>
+          </div>
+          <form class="newsletter-form" style="display: flex; gap: 0.75rem; align-items: center; white-space: nowrap;">
+            <label for="email" class="visually-hidden">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+              style="min-width: 260px; padding: var(--space-sm) var(--space-lg); background: var(--color-bg-primary); border: 1px solid var(--color-border-default); border-radius: var(--border-radius-pill); color: var(--color-text-primary); font-family: var(--font-family); font-size: var(--fs-body); width: auto;"
+              aria-label="Email address for newsletter"
+            >
+            <button type="submit" class="btn btn--primary" style="white-space: nowrap;">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact" role="contentinfo">
     <div class="container">
-      <div class="section-header">
-        <div class="label">Shop</div>
-        <h2>Motorcycle gear you can trust</h2>
-        <p style="color:#B8B4AE;max-width:70ch;margin:0;">Browse the full RC Motogarage collection and find ride-ready gear built for Indonesian riders.</p>
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo" aria-hidden="true">RC</div>
+          <p class="footer__description text-body">
+            Premium motorcycle gear & apparel for real Indonesian riders. Engineered with precision, built for the road.
+          </p>
+        </div>
+
+        <nav class="footer__column" aria-label="Shop navigation">
+          <h3 class="footer__column-title">Shop</h3>
+          <ul class="footer__links">
+            <li><a href="/shop.html#helmets" class="footer__link">Helmets</a></li>
+            <li><a href="/shop.html#jackets" class="footer__link">Jackets & Suits</a></li>
+            <li><a href="/shop.html#gloves" class="footer__link">Gloves</a></li>
+            <li><a href="/shop.html#boots" class="footer__link">Boots</a></li>
+            <li><a href="/shop.html#armor" class="footer__link">Armor & Protection</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__column" aria-label="Support navigation">
+          <h3 class="footer__column-title">Support</h3>
+          <ul class="footer__links">
+            <li><a href="#size-guide" class="footer__link">Size Guide</a></li>
+            <li><a href="#warranty" class="footer__link">Warranty & Returns</a></li>
+            <li><a href="#shipping" class="footer__link">Shipping Info</a></li>
+            <li><a href="#contact" class="footer__link">Contact Us</a></li>
+            <li><a href="#faq" class="footer__link">FAQ</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__column" aria-label="Company navigation">
+          <h3 class="footer__column-title">Company</h3>
+          <ul class="footer__links">
+            <li><a href="#about" class="footer__link">Our Story</a></li>
+            <li><a href="#workshop" class="footer__link">Workshop Services</a></li>
+            <li><a href="#events" class="footer__link">Events & Rides</a></li>
+            <li><a href="#careers" class="footer__link">Careers</a></li>
+            <li><a href="#press" class="footer__link">Press Kit</a></li>
+          </ul>
+        </nav>
       </div>
 
-      <div class="products">
-        <a class="card card--tile" href="shop.html"><img src="assets/001-arai-super-sale.png" alt="Arai Super Sale"></a>
-        <a class="card card--tile" href="shop.html"><img src="assets/002-rs-taichi-clearance.png" alt="RS Taichi Clearance"></a>
-        <a class="card card--tile" href="shop.html"><img src="assets/003-store-project.jpg" alt="Store Experience"></a>
-      </div>
-
-      <a class="cta btn-full" href="shop.html" style="margin-top: 2.5rem;">Shop Now</a>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about">
-    <div class="container about-grid">
-      <div class="about-text">
-        <div class="label">About the brand</div>
-        <h2 style="font-size:clamp(1.5rem,3vw,2.6rem);line-height:1.1;font-weight:800;margin:.3rem 0 .8rem;">Built on trust. Powered by community.</h2>
-        <p>RC Motogarage was founded to close the gap between high-end motorcycle gear and real Indonesian riders. From Arai and RS Taichi to local fit-outs and protective wear, every product is chosen to match terrain, weather, and riding style.</p>
-        <p>The brand grew from a single workshop into a household name across Greater Jakarta — known for same-day service, hands-on fitting, and campaigns that don’t just look good, but move people.</p>
-
-        <div class="branches">
-          <div class="branch">
-            <strong>Jakarta Selatan</strong>
-            <span>Flagship store + service center</span>
-          </div>
-          <div class="branch">
-            <strong>BSD / Tangerang</strong>
-            <span>Retail kiosk</span>
-          </div>
-          <div class="branch">
-            <strong>Workshop Labs</strong>
-            <span>Modifications, setup, fitting</span>
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+          <p class="footer__copyright text-body">&copy; 2025 RC Motogarage. All rights reserved.</p>
+          <div class="footer__social" role="list" aria-label="Social media links">
+            <a href="https://instagram.com/rcmotogarage" class="footer__social-link" aria-label="Follow us on Instagram" role="listitem">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://youtube.com/@rcmotogarage" class="footer__social-link" aria-label="Subscribe on YouTube" role="listitem">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"></path>
+                <polygon points="10 15 15 12 10 9"></polygon>
+              </svg>
+            </a>
+            <a href="https://tiktok.com/@rcmotogarage" class="footer__social-link" aria-label="Follow us on TikTok" role="listitem">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 8a5 5 0 0 1 5 5v4"></path>
+                <path d="M17 18a7 7 0 10-100"></path>
+                <path d="M12 18v-5"></path>
+                <path d="M9 9v5"></path>
+              </svg>
+            </a>
           </div>
         </div>
       </div>
-      <div aria-hidden="true"></div>
     </div>
-  </section>
+  </footer>
 
-  <!-- Contact -->
-  <section id="contact">
-    <div class="container contact-grid">
-      <div class="contact">
-        <div class="label">Contact</div>
-        <h2>Let’s talk.</h2>
-        <p>Interested in campaigns, retail partnerships, or gear recommendations — reach out directly to the RC Motogarage team.</p>
-        <div class="block">
-          <h4>RC Motogarage — Head Office</h4>
-          <div class="contact-items">
-            <div><strong>Location:</strong> Jakarta, Indonesia</div>
-            <div><strong>Phone:</strong> <a href="tel:+621234567890">+62 812 3456 7890</a></div>
-            <div><strong>Instagram:</strong> <a href="https://instagram.com/rc.motogarage" target="_blank" rel="noreferrer">@rc.motogarage</a></div>
-            <div><strong>Email:</strong> <a href="mailto:hello@rcmotogarage.id">hello@rcmotogarage.id</a></div>
-            <div><strong>Hours:</strong> Mon–Sat, 09:00–18:00</div>
-          </div>
-        </div>
-      </div>
-      <div aria-hidden="true"></div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container">
-    <strong>RC Motogarage</strong> — Built for the ride. Designed for the road.<br>
-    <span style="color:#B8AE99;">Portfolio showcase · Single-page static site · No framework</span>
-  </div>
-</footer>
+  <!-- Main JavaScript -->
+  <script src="js/main.js"></script>
 </body>
 </html>
