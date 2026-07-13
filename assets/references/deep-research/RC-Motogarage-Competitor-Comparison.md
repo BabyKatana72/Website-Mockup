@@ -60,3 +60,112 @@ The sections below compare RC Motogarage with four identified market peers on di
 - **Campaign / partnership activity:** **unverified** for press-documented calendar; public Instagram references "Bellissimo Apparel Indonesia" distribution and a Dainese main-dealer positioning (not a campaign per se). *Sources: https://www.instagram.com/reel/DamVnWYk9pY/ ; https://www.instagram.com/reel/DWk4f5LkjnD/*
 - **Community presence / social proof:** TikTok unboxing/community posts; Instagram co-brand posts; Facebook presence. **Inference/unverified** for relative review volume or rider-group reputation. *Sources: https://www.tiktok.com/@cascomotoworld ; https://www.facebook.com/photo.php?fbid=594216309659040&set=a.191756576571684&id=100072120292969*
 - **Operational differentiators visible online:** Self-identified Dainese Main Dealer. **Inference/unverified** for second-hand, fitting workshops, or formal loyalty programs. *Source: https://www.instagram.com/reel/DWk4f5LkjnD/*
+
+---
+
+## Appendix A) Online Presence Breakdown: RC Motogarage vs Market Peers
+
+> **Scope:** Online-presence attributes only, verified from public sources as of research date. Dimensions with no public evidence are marked **unverified**. No rankings or comparative judgments are made.
+
+---
+
+### RC Motogarage
+
+- **Official website URL(s):**
+  - https://go.rcmotogarage.id/ — HTTPS; link-hub/homepage with sections for Instagram/Facebook/TikTok/YouTube follows, per-city WhatsApp contacts, Google Maps store links, Tokopedia/Blibli marketplace links, secondary website link. *Source: https://go.rcmotogarage.id/*
+  - http://www.rcmotogarage.com/ — listed on go.rcmotogarage.id; HTTP. *Source: https://go.rcmotogarage.id/*
+- **Instagram:** Handle @rc_motogarage; visible follower band 270K+ / 24K+ posts; product/event/reel content cadence observable; shop-feature posts visible. *Source: https://www.instagram.com/rc_motogarage/* (cited via search snippet; direct page scrape unsupported by extractor)
+- **TikTok:** Handles @rc_motogarage and @rc_motogarage2; visible presence with product/tutorial content. *Sources: https://www.tiktok.com/@rc_motogarage2 ; https://go.rcmotogarage.id/*
+- **Facebook:** Page rcmotogarage.id exists with contact/store description. *Source: https://www.facebook.com/rcmotogarage.id/* (cited via search snippet; direct page scrape unsupported by extractor)
+- **YouTube:** Channel @RCVideoID exists; recent monthly uploads visible (unboxings, giveaways, ride-along content); older videos with 38K views; active community posts/giveaways. *Source: https://www.youtube.com/@RCVideoID* (page partially captured via extractor redirect; video list and posts visible)
+- **Other notable presence:** Linktree/hub not used as primary; multi-city WhatsApp flows; Tokopedia/Blibli multi-store inventory tied to branches.
+
+---
+
+### Riderspot
+
+- **Official website URL(s):**
+  - https://riderspot.co.id/ — HTTPS; full catalog structure with category menu: Helmets, Jacket, Intercom, Shoes, Tees, Bag, Gloves, Pants; promo banners, product pages with variants/pricing in IDR. *Source: https://riderspot.co.id/*
+- **Instagram:** Handle @riderspot; store-visit and product-recommendation reels/posts visible; shop status evidenced by links to web/marketplaces in posts. *Sources: https://www.instagram.com/reel/DZzLpa7ikNh/ ; https://www.instagram.com/reel/DYX6wnLEwGz/* (cited via search snippet; direct page scrape unsupported by extractor)
+- **TikTok:** Handle @riderspot; visible presence with 255.2K Likes / 9,780 Followers per platform snippet; product content visible. *Source: https://www.tiktok.com/@riderspot* (cited via search snippet; direct page scrape unsupported by extractor)
+- **Facebook:** Page "Rider'Spot" @riderspot.co.id exists; 8,104 likes; mention/community posts visible. *Source: https://www.facebook.com/riderspot.co.id/mentions/* (cited via search snippet; direct page scrape unsupported)
+- **YouTube:** Channel @riderspot2012 / UC87Fylrvr1JCUpBNcN0khyQ; video count 1.1K; recent uploads within days (product reviews); popular videos up to 51K views from prior years. *Source: https://www.youtube.com/channel/UC87Fylrvr1JCUpBNcN0khyQ* (page content partially captured)
+- **Other notable presence:** Linktree https://linktr.ee/riderspot aggregating Instagram/TikTok/YouTube/Website + 2 store locations + Shopee/Blibli/Tokopedia + multiple WhatsApp sales lines. *Source: https://linktr.ee/riderspot*
+
+---
+
+### Juragan Helm
+
+- **Official website URL(s):**
+  - https://juraganhelm.com/en/ — HTTPS; homepage with hero banner, testimonials, product-focused imagery. *Source: https://juraganhelm.com/en/*
+- **Instagram:** Handle @juraganhelm; posts/reels with product and store references visible; shop links in bio. *Source: https://www.instagram.com/juraganhelm/* (cited via search snippet; direct page scrape unsupported)
+- **TikTok:** Handle @juraganhelm; 1M Likes / 117.8K Followers per platform snippet; product video content visible. *Source: https://www.tiktok.com/@juraganhelm* (cited via search snippet)
+- **Facebook:** Page "Juragan Helm" exists with Jakarta location/contact. *Source: https://www.facebook.com/juraganhelm/* (cited via search snippet)
+- **YouTube:** Channel "Juragan Helm" (formerly ID) @JuraganHelmID: 22.2K subscribers / 172 videos / 2,555,790 views per about page; tutorials, previews, unboxings; reposted third-party store footage also present. *Source: https://www.youtube.com/c/JuraganHelmID/about*
+- **Other notable presence:** Bukalapak store referenced in YouTube channel description. *Source: https://www.youtube.com/c/JuraganHelmID/about*
+
+---
+
+### Jagoan Helm
+
+- **Official website URL(s):**
+  - http://jagoanhelm.id/ — HTTP (not HTTPS); homepage with product tiles, pricing, and "Lihat semua" listing flow; reCAPTCHA/error message present on product pages during capture. *Source: http://jagoanhelm.id/*
+- **Instagram:** Handle @jagoanhelm; product-recommendation posts; customer UGC mentions; website link referenced. *Source: https://linktr.ee/jagoanhelm ; https://www.instagram.com/reel/DaVADz0y02t/* (cited via search snippet)
+- **TikTok:** Handle @jagoanhelm; 9M Likes / 451K Followers per platform snippet; TikTok Shop Official badge; active product and style content. *Source: https://www.tiktok.com/@jagoanhelm* (cited via search snippet); https://linktr.ee/jagoanhelm
+- **Facebook:** No clearly evidenced dedicated brand Facebook page from public sources; only personal/community references observed. *Status: unverified*
+- **YouTube:** Linktree lists official site; third-party article lists ~114K subscribers; URL https://www.youtube.com/channel/UCgjaFw_WnDZuXGRT-hbCmRA linked from linktr.ee. *Sources: https://linktr.ee/jagoanhelm ; https://www.kotakhelm.com/2023/09/3-canel-youtube-helm-terbaik-di.html*
+- **Other notable presence:** Linktree aggregates TikTok Shop Official, Blibli Official, Lazada Official, Shopee Official, Tokopedia shop, YouTube, website, WhatsApp dropship/wholesale/COD, and Helmet Care WhatsApp.
+
+---
+
+### Casco Motoworld
+
+- **Official website URL(s):** No standalone official website evidenced from public search/extraction. *Status: unverified*
+- **Instagram:** Handle @casco.motoworld; store addresses, co-brand/Dainese distribution references visible. *Source: https://www.instagram.com/casco.motoworld/* (cited via search snippet)
+- **TikTok:** Handle @cascomotoworld; short-form unboxing/product posts visible. *Source: https://www.tiktok.com/@cascomotoworld* (cited via search snippet)
+- **Facebook:** Photo/page presence evidenced. *Source: https://www.facebook.com/photo.php?fbid=594216309659040&set=a.191756576571684&id=100072120292969*
+- **YouTube:** Channel "Casco Motoworld" exists; shorts and older long-form unboxings; relatively small recent view counts and long gaps since some uploads. *Source: https://www.youtube.com/channel/UC8cc66KNn2uA4uzurNibvlw*
+- **Other notable presence:** Tokopedia storefront `cascomotoworld` with visible rating/sales; Shopee presence linked. *Source: https://www.tokopedia.com/cascomotoworld*
+
+---
+
+### Cross-entity comparison (dimensions verifiable for both sides)
+
+| Dimension | RC Motogarage | Riderspot | Juragan Helm | Jagoan Helm | Casco Motoworld |
+| --- | --- | --- | --- | --- | --- |
+| **Website availability / HTTPS + structural completeness** | HTTPS hub + secondary HTTP; multi-branch flow and marketplace links visible | HTTPS; full WooCommerce catalog with categories/pricing | HTTPS; minimal hero/testimonial structure, no full catalog crawl | HTTP only; basic product tiles; checkout/capture error observed | unverified |
+| **Multi-platform social coverage** | Instagram, TikTok (2 accounts), Facebook, YouTube | Instagram, TikTok, Facebook, YouTube, Linktree | Instagram, TikTok, Facebook, YouTube | Instagram, TikTok, YouTube, Linktree; no evidenced Facebook page | Instagram, TikTok, Facebook, YouTube |
+| **Marketplace-linked social shopping** | Tokopedia + Blibli linked from website hub; Singapore?USA/Tokopedia-style links visible | Shopee/Blibli/Tokopedia in Linktree + website calls to shop | Tokopedia/Shopee/Blibli/Bukalapak pinned; YouTube links | TikTok Shop Official; Shopee/Lazada/Blibli/Tokopedia in Linktree | Tokopedia/Shopee storefronts observed |
+| **Content recency / activity signals** | YouTube monthly uploads; Instagram daily reels/posts | YouTube recent uploads (days); Linktree/Insta active | Primary uploads older; YouTube presence active but irregular | Shorts and promos active; third-party ranking dated 2023 | YouTube infrequent; TikTok/Instagram active but smaller |
+| **Appointment/booking/contact flows visible online** | Per-city WhatsApp + Google Maps links; no online booking form | WhatsApp per store; no online booking form | WhatsApp in Instagram bio; store contact | WhatsApp dropship/wholesale/COD; no public booking flow | unverified |
+| **Community touchpoints (groups, events, UGC)** | YouTube community giveaway posts; morning rides; creator visits | Event references in Instagram reels (BMW Motorrad Heritage Night) | Page/reels with community replies | TikTok/Instagram customer UGC visible | Instagram co-brand posts; TikTok unboxings |
+
+---
+
+### Source list
+
+- https://go.rcmotogarage.id/
+- http://www.rcmotogarage.com/
+- https://www.instagram.com/rc_motogarage/
+- https://www.tiktok.com/@rc_motogarage2
+- https://www.facebook.com/rcmotogarage.id/
+- https://www.youtube.com/@RCVideoID
+- https://riderspot.co.id/
+- https://linktr.ee/riderspot
+- https://www.tiktok.com/@riderspot
+- https://www.facebook.com/riderspot.co.id/mentions/
+- https://www.youtube.com/channel/UC87Fylrvr1JCUpBNcN0khyQ
+- https://juraganhelm.com/en/
+- https://www.instagram.com/juraganhelm/
+- https://www.tiktok.com/@juraganhelm
+- https://www.facebook.com/juraganhelm/
+- https://www.youtube.com/c/JuraganHelmID/about
+- http://jagoanhelm.id/
+- https://linktr.ee/jagoanhelm
+- https://www.tiktok.com/@jagoanhelm
+- https://www.kotakhelm.com/2023/09/3-canel-youtube-helm-terbaik-di.html
+- https://www.instagram.com/casco.motoworld/
+- https://www.tiktok.com/@cascomotoworld
+- https://www.facebook.com/photo.php?fbid=594216309659040&set=a.191756576571684&id=100072120292969
+- https://www.youtube.com/channel/UC8cc66KNn2uA4uzurNibvlw
+- https://www.tokopedia.com/cascomotoworld
