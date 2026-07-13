@@ -1,0 +1,23 @@
+# Hermes project config / sessions
+.hermes/
+
+# Dependencies / tooling
+node_modules/
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Build / temp
+dist/
+build/
+tmp/
+*.log
+
+# Env / secrets
+.env
+.env.*
