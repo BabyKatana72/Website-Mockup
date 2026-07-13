@@ -113,25 +113,12 @@
     .body strong { color: var(--color-white); font-weight: 700; }
     .body em { color: var(--color-muted); font-style: italic; opacity: 0.9; }
 
-    /* Accent divider (diagonal red line 15-30deg) */
-    .divider-diagonal {
-      position: relative;
+    /* Accent divider (horizontal red line) */
+    .divider {
       height: 1px;
-      background: transparent;
-      margin: 1.5rem 0;
-      overflow: visible;
-    }
-    .divider-diagonal::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 120%;
-      height: 2px;
       background: var(--color-red);
-      transform: rotate(-15deg);
-      transform-origin: left top;
-      box-shadow: 0 0 12px rgba(237,28,36,0.35);
+      margin: 1.5rem 0;
+      opacity: 0.9;
     }
 
     /* Pill CTA */
@@ -422,7 +409,7 @@
         <p class="label label--red">Pitch Deck</p>
         <h1 id="coverTitle" class="cover-mark">RC <span>Motogarage</span></h1>
         <p class="cover-tagline">Premium motorcycle gear & apparel for Indonesian riders</p>
-        <div class="divider-diagonal" style="max-width: 520px; margin-left:0;"></div>
+        <div class="divider" style="max-width: 520px; margin-left:0;"></div>
         <div class="cover-meta">
           <span class="cover-chip">Owner / CEO: Reyner Alexander</span>
           <span class="cover-chip">Jakarta, Indonesia</span>
@@ -440,7 +427,7 @@
       <div class="slide__inner">
         <p class="label">02 — The Problem</p>
         <h2 id="problemTitle" class="heading">Indonesian Riders’ Pain Points</h2>
-        <div class="divider-diagonal" style="max-width: 420px;"></div>
+        <div class="divider" style="max-width: 420px;"></div>
         <ul class="pain-list" role="list">
           <li>
             <div>
@@ -470,7 +457,7 @@
       <div class="slide__inner">
         <p class="label">03 — The Brand Today</p>
         <h2 id="brandTitle" class="heading">Verified Facts</h2>
-        <div class="divider-diagonal" style="max-width: 420px;"></div>
+        <div class="divider" style="max-width: 420px;"></div>
         <div class="marker-row" role="list">
           <div class="marker" role="listitem">
             <div class="marker__label">Status</div>
@@ -500,7 +487,7 @@
       <div class="slide__inner">
         <p class="label">04 — What We Sell</p>
         <h2 id="sellTitle" class="heading">Categories & Verified Brands</h2>
-        <div class="divider-diagonal" style="max-width: 420px;"></div>
+        <div class="divider" style="max-width: 420px;"></div>
         <div class="grid-2 mt-2">
           <div class="card">
             <div class="card__title">Core categories</div>
@@ -522,7 +509,7 @@
       <div class="slide__inner">
         <p class="label">05 — How We Reach Customers</p>
         <h2 id="reachTitle" class="heading">Sales & Distribution Channels</h2>
-        <div class="divider-diagonal" style="max-width: 420px;"></div>
+        <div class="divider" style="max-width: 420px;"></div>
         <div class="grid-3 mt-2" role="list">
           <div class="card" role="listitem">
             <div class="card__title">Offline stores</div>
@@ -548,7 +535,7 @@
       <div class="slide__inner">
         <p class="label">06 — Competitive Landscape</p>
         <h2 id="compTitle" class="heading">Top 5 Rivals by Footprint</h2>
-        <div class="divider-diagonal" style="max-width: 420px;"></div>
+        <div class="divider" style="max-width: 420px;"></div>
         <div class="comp-list" role="list">
           <div class="comp" role="listitem">
             <div>
@@ -597,7 +584,7 @@
       <div class="slide__inner">
         <p class="label">07 — Past Campaigns &amp; Partnerships</p>
         <h2 id="campTitle" class="heading">Verified Activations</h2>
-        <div class="divider-diagonal" style="max-width: 420px;"></div>
+        <div class="divider" style="max-width: 420px;"></div>
         <div class="grid-2 mt-2" role="list">
           <div class="event" role="listitem">
             <div class="event__name">Phillip Works x RC Motogarage</div>
@@ -634,7 +621,7 @@
       <div class="slide__inner">
         <p class="label">08 — Digital Footprint</p>
         <h2 id="digTitle" class="heading">Websites, Social &amp; Marketplace Data</h2>
-        <div class="divider-diagonal" style="max-width: 420px;"></div>
+        <div class="divider" style="max-width: 420px;"></div>
         <div class="grid-2 mt-2" role="list">
           <div class="card" role="listitem">
             <div class="card__title">Web properties</div>
@@ -665,7 +652,7 @@
       <div class="slide__inner">
         <p class="label">09 — Gaps &amp; Opportunities</p>
         <h2 id="gapTitle" class="heading">Transparency, Coverage &amp; Growth Levers</h2>
-        <div class="divider-diagonal" style="max-width: 420px;"></div>
+        <div class="divider" style="max-width: 420px;"></div>
         <div class="grid-2 mt-2" role="list">
           <div class="gap" role="listitem">
             <div class="gap__title">RCX Preloved channel</div>
@@ -694,7 +681,7 @@
       <div class="slide__inner" style="max-width: 900px;">
         <p class="label">10 — The Ask / Next Step</p>
         <h2 id="askTitle" class="heading">What We Are Proposing</h2>
-        <div class="divider-diagonal" style="max-width: 420px;"></div>
+        <div class="divider" style="max-width: 420px;"></div>
         <p class="body" style="font-size: clamp(1.05rem, 1.4vw, 1.2rem); line-height: 1.7; color: var(--color-white);">
           We are seeking to engage on a focused partnership to deliver a new website, campaign visuals, social assets, and packaging for RC Motogarage — closing identified transparency and coverage gaps, and extending the brand into underserved rider cities. No placeholder metrics or invented targets are included.
         </p>
@@ -726,7 +713,7 @@
       <div class="slide__inner">
         <p class="label">11 — Contact</p>
         <h2 id="contactTitle" class="heading">Get In Touch</h2>
-        <div class="divider-diagonal" style="max-width: 420px;"></div>
+        <div class="divider" style="max-width: 420px;"></div>
         <p class="body"><strong>HQ:</strong> Jl. Haji Nawi Raya No.45B, Gandaria Utara, Kebayoran Baru, Jakarta Selatan</p>
         <div class="contact-row mt-2">
           <a class="contact-chip" href="https://go.rcmotogarage.id/" target="_blank" rel="noopener">go.rcmotogarage.id</a>
