@@ -38,17 +38,16 @@
 
 ## 4) Competitors — Top 5
 
-Indonesian motorcycle gear/apparel retailers with multi-brand online/offline presence, selected by marketplace footprint and social visibility:
+Indonesian motorcycle gear/apparel retailers with readily verifiable multi-channel presence, selected from the specified set based on public official website, marketplace storefront, and social/offline evidence:
 
-| Rank | Retailer/Channel | Evidence |
-|------|------------------|---------|
-| 1 | **Racing World Indonesia / Casco Motoworld** | Instagram brand posts, offline store references, Shopee presence |
-| 2 | **One3Motoshop / CXP Motoz** | Mentions in constellation with RC Motogarage at Michelin event; marketplace storefronts (Tokopedia/Shopee/Bukalapak) |
-| 3 | **Deliwafa Official Store** | Tokopedia/Lazada storefronts placing premium helmet brands (Suomy, etc.) |
-| 4 | **MotoWorld Indonesia** | Shopee marketplace + community references |
-| 5 | **Webike Indonesia** | Specialized online gear marketplace with large catalog |
+| Retailer | Evidence |
+|----------|---------|
+| **Riderspot** | Official website `https://riderspot.co.id/`; about page confirms operation since 2012. Instagram `@riderspot`, Facebook `@riderspot.co.id`. Marketplaces: Tokopedia `riderspot-official` and `riderspotsouth`, Shopee `shopee.co.id/riderspot`, Blibli merchant page. Offline stores: Jakarta Timur at Rukan Sedayu City, and Jakarta Selatan at Jl. Sultan Iskandar Muda No 8D. |
+| **Juragan Helm** | Official website `https://juraganhelm.com/en/`. Instagram presence; Facebook page `Juragan Helm` indicates offline shop at Jl. Panjang Arteri Kelapa Dua no. 17A, Jakarta Barat. Marketplaces: Tokopedia `jurhel`, Shopee `Juragan Helm ID`, Blibli `Juragan Helm Official`. |
+| **Jagoan Helm** | Official website `http://jagoanhelm.id/` referenced in social posts. Instagram `@jagoanhelm`, TikTok `@jagoanhelm`, Facebook `JagoanHelm1`. Marketplaces: Tokopedia `jagoan-helm`, Shopee `jagoanhelm`, Lazada `JAGOANHELM`, Blibli official store. Offline Google Maps listing present. |
+| **Casco Motoworld** | Instagram `@casco.motoworld` showing Bandung and Jakarta operations. Facebook page `Casco Motoworld` lists Bandung at Jl. Pungkur No.239C and Jakarta at Jl. Benda Raya No.10X, Kemang. Marketplaces: Tokopedia `cascomotoworld` and `casco-motoworld-jakarta-new`, Shopee `cascomotoworld`. |
 
-- Rank is based on readily visible marketplace and social footprint, not market share data, which is unverified.
+- This section was corrected to the specified competitor set. No audited market share or national ranking data was found; relative placement is not asserted.
 
 ## 5) Digital Presence
 
