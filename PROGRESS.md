@@ -33,6 +33,10 @@
   - Self-contained HTML slides
   - Brand-aligned: Montserrat, night-black/charcoal/graphite, RC Red accents, gold for premium labels
   - No `.pptx` because `python-pptx` was unavailable
+- Deep research dossier saved at `assets/references/deep-research/RC-Motogarage-Deep-Research.md`
+  - Cross-referenced facts only, no marketing fluff
+  - 8 sections with sources cited per claim
+  - Gaps explicitly marked "unverified"
 
 ## Known Notes
 - User wants cheap revisions through DM/messaging rather than full redraft
